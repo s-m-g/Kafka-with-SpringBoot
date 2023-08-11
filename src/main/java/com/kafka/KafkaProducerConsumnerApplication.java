@@ -17,7 +17,7 @@ public class KafkaProducerConsumnerApplication {
 	@Bean
 	CommandLineRunner commandLineRunner(KafkaTemplate<String, String> kafkaTemplate){
 		return args->{
-			kafkaTemplate.send("topic1", "hi, this message is for my consumer");
+			kafkaTemplate.send("topic1", "hi, this message is from commandLineRunner");
 		};
 	}
 
